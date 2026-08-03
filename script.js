@@ -1,34 +1,26 @@
-//complete this code
 class Person {
-	constructor(name,age){
-		this.name;
-		this.age;
-	}
-	get_name(){
-		return this._name;
-	}
-	set name(name){
-		this._name=name;
-	}
-	get age(){
-		return this._age;
-	}
-	set age(age){
-		this._age=age;
-	}
-}
-
-
-
-class Teacher extends Person {
   constructor(name, age) {
-    super(name, age);
+    this._name = name;
+    this._age = age;
   }
 
-  teach() {
-    console.log(`${this.name} is teaching`);
+  get name() {
+    return this._name;
+  }
+
+  set name(name) {
+    this._name = name;
+  }
+
+  get age() {
+    return this._age;
+  }
+
+  set age(age) {
+    this._age = age;
   }
 }
+
 class Student extends Person {
   constructor(name, age) {
     super(name, age);
@@ -39,6 +31,15 @@ class Student extends Person {
   }
 }
 
+class Teacher extends Person {
+  constructor(name, age) {
+    super(name, age);
+  }
+
+  teach() {
+    console.log(`${this.name} is teaching`);
+  }
+}
 
 // Do not change the code below this line
 window.Person = Person;
